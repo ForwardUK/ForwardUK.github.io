@@ -123,9 +123,35 @@ body {
 .smol {
 	font-size: 32px;
 }
+
+.stickyheader {
+  background: #c5b3ff;
+  color: black;
+    padding: 10px 16px;
+}
+
+.stickyheader a {
+  text-decoration: none;
+  color: black;
+}
+
+.stickyheader a:hover{
+  text-decoration: underline;
+  color: #262625;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 </style>
 </head>
 <body>
+
+<div class="stickyheader" id="myStickyHeader">
+  <h2 align="center"><a href="Documents/Forward_Pledge_to_the_People.pdf">THE FORWARD PLEDGE IS NOW OUT: READ HERE</a><h2>
+</div>
 
 <div class="header">
   <a href="index.html" class="logo">  <img style='vertical-align:middle;' width="6%" src='New-Logo.png'>
@@ -195,6 +221,21 @@ body {
   </div>
 
 </div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myStickyHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 
 </body>
 </html>
