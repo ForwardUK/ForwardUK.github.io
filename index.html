@@ -88,7 +88,7 @@ body {
 
 .column1 {
   float: left;
-  width: 10%;
+  width: 1%;
   padding: 15px;
   vertical-align:middle;
   display: inline;
@@ -96,13 +96,13 @@ body {
 
 .column2 {
   float: left;
-  width: 65%;
+  width: 73%;
   padding: 15px;
 }
 
 .column3 {
-  float: left;
-  width: 25%;
+  float: right;
+  width: 24%;
   height: 60%;
 }
 
@@ -145,6 +145,29 @@ body {
   top: 0;
   width: 100%;
 }
+
+/* Create four equal columns that floats next to each other */
+.rw {
+  float: left;
+  text-align: center;
+  width: 25%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+
+/* Clear floats after the columns */
+.xx:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.center{
+text-align: center;
+}
 </style>
 </head>
 <body>
@@ -185,24 +208,45 @@ body {
   
   <div class="column2">
   
-  <img style='vertical-align:middle;' width="20%" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/03/10/22/polling-station-0.jpg">
-<div style='font-size: 200%;vertical-align:middle; display:inline;'><a href="candidates.html">Forward Endorsed Candidates</a></div>
+  <div class="xx">
+  <div class="rw" style="background-color:#699994; border-right: 3px solid black;">
+    <h2><img align="centre" width="75%" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/03/10/22/polling-station-0.jpg"></h2>
+    <h2 align="centre"><a href="candidates.html">Forward Endorsed Candidates</a></h2>
+  </div>
+  <div class="rw" style="background-color:#769d9a;">
+    <h2><img width="70%" src="regions.png"></h2>
+    <h2><a href="regions.html">Regions</a></h2>
+  </div>
+  <div class="rw" style="background-color:#7fa3a4;">
+    <h2><img width="70%" src="join.png"></h2>
+    <h2><a href="join.html">Join us!</a></h2>
+  </div>
+  <div class="rw" style="background-color:#94b0b4; border-right: 1px solid black;">
+    <h2><img width="70%" src="whatwewant.png"></h2>
+    <h2><a href="documents.html">Documents</a></h2>
+  </div>
+</div>
 
-<br><br>
+<br>
+
+<div class="center"><img class="center" width="50%" src="forwardvirtualmembersassembly.png"></div><br>
+
+<p>Forward is not a political party.</p>
   
-  <img style='vertical-align:middle;' width="20%" src="regions.png">
-<div style='font-size: 200%;vertical-align:middle; display:inline;'><a href="regions.html">Regions</a></div>
 
 <br><br>
 
-  <img style='vertical-align:middle;' width="20%" src="join.png">
-<div style='font-size: 200%;vertical-align:middle; display:inline;'><a href="join.html">Join us!</a></div>
+<div style='font-size: 200%;vertical-align:middle; display:inline;'></div>
+
+<br><br>
+
+ 
+<div style='font-size: 200%;vertical-align:middle; display:inline;'></div>
 
 
 <br><br>
 
-  <img style='vertical-align:middle;' width="20%" src="whatwewant.png">
-<div style='font-size: 200%;vertical-align:middle; display:inline;'><a href="documents.html">Documents</a></div>
+<div style='font-size: 200%;vertical-align:middle; display:inline;'></div>
 
 
   </div>
